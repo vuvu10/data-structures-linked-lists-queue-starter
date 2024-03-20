@@ -33,8 +33,8 @@ class SinglyLinkedList {
             this.head = newNode;
             return head;
         } else {
-            let current = head;
-            while (current) {
+            let current = this.head;
+            while (current.next) {
                 current = current.next;
             }
             current.next = newNode;
@@ -55,18 +55,40 @@ class SinglyLinkedList {
 
     removeFromTail() {
         // Remove node at tail
+        if (!this.head) return undefined;
+
+        if (this.length === 1) {
+            this.head = null;
+            this.length--;
+            return undefined;
+        }
+        let current = this.head;
+        let previous = null;
+        while (current.next) {
+            previous = current;
+            current = current.next;
+        }
+        previous.next = null;
+        this.length--;
+        return current;
 
         // Write your hypothesis on the time complexity of this method here
     }
 
     peekAtHead() {
         // Return value of head node
+        return this.head ? this.head.value : undefined;
 
         // Write your hypothesis on the time complexity of this method here
     }
 
     print() {
         // Print out the linked list
+        let current = this.head;
+        while (current) {
+            console.log(current.value);
+            current = current.next;
+        }
 
         // Write your hypothesis on the time complexity of this method here
     }
