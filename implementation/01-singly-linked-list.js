@@ -27,24 +27,28 @@ class SinglyLinkedList {
         // Write your hypothesis on the time complexity of this method here
 
         // Add node of val to tail of linked list
-        let newNode = new SinglyLinkedNode(data);
+        let newNode = new SinglyLinkedNode(val);
 
-        if (!head) {
-            head = newNode;
+        if (!this.head) {
+            this.head = newNode;
             return head;
+        } else {
+            let current = head;
+            while (current) {
+                current = current.next;
+            }
+            current.next = newNode;
         }
-
-        let curr = head;
-        while (curr) {
-            curr = current.next;
-        }
-        curr.next = newNode;
-
-        return head;
+        return this;
     }
 
     removeFromHead() {
         // Remove node at head
+        if (!this.head) return undefined;
+        const removeHead = this.head;
+        this.head = this.head.next;
+        this.length--;
+        return removeHead;
 
         // Write your hypothesis on the time complexity of this method here
     }
