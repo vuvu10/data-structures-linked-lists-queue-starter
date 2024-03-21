@@ -24,6 +24,7 @@ class Queue {
 
 
         // Write your hypothesis on the time complexity of this method here
+        // Time complexity: O(1) Constant.
     }
 
     dequeue() {
@@ -43,6 +44,7 @@ class Queue {
         return removedNode.value;
 
         // Write your hypothesis on the time complexity of this method here
+        // Time complexity: O(1) Constant.
     }
 
 }
