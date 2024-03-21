@@ -21,11 +21,13 @@ class SinglyLinkedList {
         return this;
 
         // Write your hypothesis on the time complexity of this method here
+        // Time Complexity: O(1) Constant.
     }
 
     addToTail(val) {
         // There are bugs in this method! Fix them!!!
         // Write your hypothesis on the time complexity of this method here
+        // Time Complexity: O(n) Linear.
 
         // Add node of val to tail of linked list
         const newNode = new SinglyLinkedNode(val);
@@ -53,6 +55,7 @@ class SinglyLinkedList {
         return removeHead;
 
         // Write your hypothesis on the time complexity of this method here
+        // Time Complexity: O(1) Constant.
     }
 
     removeFromTail() {
@@ -75,6 +78,7 @@ class SinglyLinkedList {
         return current;
 
         // Write your hypothesis on the time complexity of this method here
+        // Time Complexity: O(n) Linear.
     }
 
     peekAtHead() {
@@ -82,6 +86,7 @@ class SinglyLinkedList {
         return this.head ? this.head.value : undefined;
 
         // Write your hypothesis on the time complexity of this method here
+        // Time Complexity: O(1) Constant.
     }
 
     print() {
@@ -93,6 +98,7 @@ class SinglyLinkedList {
         }
 
         // Write your hypothesis on the time complexity of this method here
+        // Time Complexity: O(n) Linear.
     }
 }
 
